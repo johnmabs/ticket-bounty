@@ -1,3 +1,17 @@
+import Heading from "@/components/heading";
+import { ticketsPath } from "@/paths";
+import Link from "next/link";
+
 export default function HomePage() {
-  return <h2>Home Page</h2>;
+  return (
+    <div className="flex-1 flex flex-col gap-y-8">
+      <Heading title="Home" description="Your home place to start" />
+
+      <div className="flex-1 flex flex-col items-center">
+        <Link className="underline" href={ticketsPath()}>
+          Go to Tickets
+        </Link>
+      </div>
+    </div>
+  );
 }
